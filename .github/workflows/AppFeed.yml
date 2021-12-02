@@ -57,7 +57,7 @@ jobs:
             # 注意替换为你的 GitHub 源仓库地址
             github-repo: "https://github.com/Squidly271/AppFeed.git"
             # 注意替换为你的 CODING 目标仓库地址
-            coding-repo: "git@e.coding.net:juzhijian/unraidapp/AppFeed.git"
+            coding-repo: "git@gitee.com:juzhijian/AppFeed.git"
 
       - name: Git Repository Sync
         # You may pin to the exact commit or the version.
