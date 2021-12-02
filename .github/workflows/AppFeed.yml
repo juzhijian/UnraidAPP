@@ -46,7 +46,7 @@ jobs:
            # Git branch or tag to checkout.
            ref: # optional
            # Relative path from current directory, where to clone.
-           path: # optional
+           path: /home/runner/work/Squidly271/AppFeed # optional
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
