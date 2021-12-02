@@ -39,7 +39,7 @@ jobs:
             # 注意替换为你的 GitHub 源仓库地址
             github-repo: "https://github.com/Squidly271/AppFeed.git"
             # 注意替换为你的 CODING 目标仓库地址
-            coding-repo: "git@gitee.com:juzhijian/AppFeed.git"
+            coding-repo: "git@e.coding.net:juzhijian/unraidapp/AppFeed.git"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
