@@ -43,28 +43,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-  replace:
-    name: ${{ matrix.config.name }}
-    runs-on: ${{ matrix.config.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        config:  
-        - {
-          name: "AppFeed本地化替换",
-          os: ubuntu-latest
-          }
-
-  sync:
-    name: ${{ matrix.config.name }}
-    runs-on: ${{ matrix.config.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        config:  
-        - {
-          name: "AppFeed同步至coding",
-          os: ubuntu-latest
-          }
-
 
