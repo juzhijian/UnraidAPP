@@ -53,7 +53,7 @@ jobs:
         # uses: net-engine/github-repository-sync-action@ab3e4e02cc6c4eed16c22040d7b409ae1d81bce4
         uses: net-engine/github-repository-sync-action@v1.2.0
         with:
-            # SSH private key for ssh connection to the target repository
+            # 用于SSH连接到目标存储库的SSH私钥
             ssh_private_key: ${{ secrets.CODING_RSA_PRIVATE_KEY }} # optional
             # Target git repository URL
             target_repo_url: git@e.coding.net:juzhijian/unraidapp/AppFeed.git
