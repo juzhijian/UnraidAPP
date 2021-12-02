@@ -31,7 +31,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Sync Repo to CODING
-        uses: serverlesslife-cn/sync-repo-to-coding@master
+        uses: juzhijian/sync-repo-to-coding@master
         env:
             # 在 GitHub Settings->Secrets 配置 CODING_PRIVATE_KEY
             SSH_PRIVATE_KEY: ${{ secrets.CODING_PRIVATE_KEY }}
@@ -39,7 +39,7 @@ jobs:
             # 注意替换为你的 GitHub 源仓库地址
             github-repo: "https://github.com/Squidly271/AppFeed.git"
             # 注意替换为你的 CODING 目标仓库地址
-            coding-repo: "git@e.coding.net:juzhijian/unraidapp/AppFeed.git"
+            coding-repo: "git@gitee.com:juzhijian/AppFeed.git"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
