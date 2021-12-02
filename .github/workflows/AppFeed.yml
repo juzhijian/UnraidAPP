@@ -55,7 +55,7 @@ jobs:
             SSH_PRIVATE_KEY: ${{ secrets.CODING_PRIVATE_KEY }}
         with:
             # 注意替换为你的 GitHub 源仓库地址
-            github-repo: "git@github.com:Squidly271/AppFeed.git"
+            github-repo: "https://github.com/Squidly271/AppFeed.git"
             # 注意替换为你的 CODING 目标仓库地址
             coding-repo: "git@e.coding.net:juzhijian/unraidapp/AppFeed.git"
 
