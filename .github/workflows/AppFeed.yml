@@ -31,7 +31,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: Squidly271/AppFeed@master
+        uses: actions/checkout@master
+        
+      # git克隆
+      - name: Git Clone Action
+        # 您可以锁定到确切的提交或版本.
+        # uses: sudosubin/git-clone-action@8a93ce24d47782e30077508cccacf8a05a891bae
+        uses: sudosubin/git-clone-action@v1.0.1
+        with:
+           # 存储库所有者和名称. Ex: sudosubin/git-clone-action
+           repository: Squidly271/AppFeed@master # optional, default is ${{ github.repository }}
+           # Git host platform. Ex: github, gitlab, bitbucket, gitee, or else (git.suckless.org, ...)
+           platform: # optional, default is github
+           # Git branch or tag to checkout.
+           ref: # optional
+           # Relative path from current directory, where to clone.
+           path: # optional
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
