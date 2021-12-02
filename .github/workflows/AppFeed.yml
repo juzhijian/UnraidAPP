@@ -23,21 +23,48 @@ jobs:
       matrix:
         config:  
         - {
-          name: "Windows MSVC Conan Release",
+          name: "AppFeed本地化部署",
           os: ubuntu-latest
           }
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: Squidly271/AppFeed@master
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo 拉取成功！
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  replace:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:  
+        - {
+          name: "AppFeed本地化替换",
+          os: ubuntu-latest
+          }
+
+  sync:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:  
+        - {
+          name: "AppFeed同步至coding",
+          os: ubuntu-latest
+          }
+
+
