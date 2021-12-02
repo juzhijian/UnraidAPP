@@ -1,6 +1,6 @@
 # 这是一个基本工作流，可帮助您开始操作
 
-name: AppFeed本地化
+name: UnraidApp本地化
 
 # 控制工作流何时运行
 on:
@@ -23,7 +23,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "AppFeed本地化部署",
+          name: "同步AppFeed",
           os: ubuntu-latest
           }
         
