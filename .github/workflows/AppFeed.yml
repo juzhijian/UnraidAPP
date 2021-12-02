@@ -40,9 +40,9 @@ jobs:
         uses: sudosubin/git-clone-action@v1.0.1
         with:
            # 存储库所有者和名称. Ex: sudosubin/git-clone-action
-           repository: Squidly271/AppFeed@master # optional, default is ${{ github.repository }}
+           repository: Squidly271/AppFeed # optional, default is ${{ github.repository }}
            # Git host platform. Ex: github, gitlab, bitbucket, gitee, or else (git.suckless.org, ...)
-           platform: # optional, default is github
+           platform: github # optional, default is github
            # Git branch or tag to checkout.
            ref: # optional
            # Relative path from current directory, where to clone.
