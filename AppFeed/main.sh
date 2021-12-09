@@ -3,9 +3,10 @@ echo 运行成功
 cd ~
 ls
 echo 开始搜索文件
-cd /
+#cd /
 #find / -name "applicationFeed"
-ls
+pwd
+
 echo 运行结束
 
 
