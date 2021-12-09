@@ -35,5 +35,7 @@ sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">
 echo 替换结束
 
 echo 开始打包
-
+cd /tmp/GitHub/community.applications/source/community.applications/
+tar cJf community.applications-${version}-x86_64-1.txz usr
+ls
 echo 打包结束
