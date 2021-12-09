@@ -27,7 +27,7 @@ find . -type f -exec md5sum {} + > /tmp/ca.md5
 mv /tmp/ca.md5 ca.md5
 #rm -rf /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/*
 
-cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
+cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p -f
 
 echo 替换结束
 
