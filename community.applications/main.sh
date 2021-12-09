@@ -48,6 +48,6 @@ md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applicatio
 echo "md5_data = ${md5_data}"
 
 cd /github/workspace/community.applications/plugins
-sed -i '6c <!ENTITY md5       "${md5_data}">' community.applications.plg
+sed -i '6c <!ENTITY md5       "\"${md5_data}\"">' community.applications.plg
 
 echo 打包结束
