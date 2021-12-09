@@ -6,7 +6,7 @@ name: AppFeed本地化
 on:
   schedule:
     # * 定时启动
-    - cron:  '* 0/2 * * *'
+    - cron:  '30 5,17 * * *'
   #push:
     #branches:
       #- main
