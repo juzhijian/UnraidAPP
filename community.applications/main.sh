@@ -11,8 +11,9 @@ echo 开始替换V$version
 
 mkdir -p "/tmp/GitHub/community.applications/source/community.applications/"
 cd archive
-tar xJvf community.applications-${version}-x86_64-1.txz /tmp/GitHub/community.applications/source/community.applications/
-cd /tmp/GitHub/community.applications/source/community.applications/
+ls
+tar xJvf community.applications-${version}-x86_64-1.txz
+#cd /tmp/GitHub/community.applications/source/community.applications/
 ls
 
 #cp /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
