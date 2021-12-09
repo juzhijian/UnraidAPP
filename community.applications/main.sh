@@ -9,15 +9,17 @@ git config --global user.email "admin@juzhijian.com"
 
 echo 开始替换V$versions
 
+mkdir -p "/tmp/GitHub/community.applications/source/community.applications/"
+cd archive
+tar xJvf community.applications-${version}-x86_64-1.txz /tmp/GitHub/community.applications/source/community.applications/
+cd /tmp/GitHub/community.applications/source/community.applications/
+ls
 
-
-mkdir -p "/tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/"
-
-cp /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
-cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
-rm -f  ca.md5
-find . -type f -exec md5sum {} + > /tmp/ca.md5
-mv /tmp/ca.md5 ca.md5
+#cp /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
+#cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
+#rm -f  ca.md5
+#find . -type f -exec md5sum {} + > /tmp/ca.md5
+#mv /tmp/ca.md5 ca.md5
 
 
 echo 替换结束
