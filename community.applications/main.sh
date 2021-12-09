@@ -13,7 +13,8 @@ mkdir -p "/tmp/GitHub/community.applications/source/community.applications/usr/l
 cd archive
 tar xJvf community.applications-${version}-x86_64-1.txz
 cp /github/workspace/community.applications/archive/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
-rm -rf /usr/*
+rm -rf /usr
+echo 查看
 ls
 #cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
 #rm -f  ca.md5
