@@ -1,13 +1,13 @@
 #!/bin/sh
 
-versions=2021.12.08
+version=2021.12.08
 
 echo 运行替换程序成功
 
 git config --global user.name "聚指尖"
 git config --global user.email "admin@juzhijian.com"
 
-echo 开始替换V$versions
+echo 开始替换V$version
 
 mkdir -p "/tmp/GitHub/community.applications/source/community.applications/"
 cd archive
