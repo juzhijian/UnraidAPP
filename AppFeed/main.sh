@@ -11,7 +11,6 @@ echo 开始替换
 #sed -i  "s/"https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/"/"https://juzhijian.coding.net/p/unraidapp/d/ca.update.applications/git/raw/master/"/g"  `grep "https://juzhijian.coding.net/p/unraidapp/d/ca.update.applications/git/raw/master/" -rl ./ -R --exclude-dir=.git`
 
 mkdir asjijhk
-
-
+ls
 
 echo 运行结束
