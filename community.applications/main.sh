@@ -31,6 +31,8 @@ cp /tmp/GitHub/community.applications/source/community.applications/usr/local/em
 cd /github/workspace/community.applications/plugins
 md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1 > md5
 echo "md5 = $md5"
+password_do_md5=$(echo -n "sdw" | md5sum | cut -d ' ' -f 1)
+echo "md5 = $password_do_md5"
 sed -i '6c <!ENTITY md5       "\"$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1)\"">' community.applications.plg
 sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">\n<!ENTITY pluginURL "https://juzhijian.coding.net/&github;/master/plugins/&name;.plg">' community.applications.plg
 
