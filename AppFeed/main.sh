@@ -4,7 +4,8 @@ cd ~
 ls
 echo 开始搜索文件
 cd /
-find / -name "applicationFeed"
+#find / -name "applicationFeed"
+ls
 echo 运行结束
 
 
