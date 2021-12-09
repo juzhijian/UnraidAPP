@@ -29,11 +29,6 @@ mv /tmp/ca.md5 ca.md5
 cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p -f
 
 cd /github/workspace/community.applications/plugins
-md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1 > md5
-echo "md5 = $md5"
-password_do_md5=$(echo -n "sdw" | md5sum | cut -d ' ' -f 1)
-echo "md5 = $password_do_md5"
-sed -i '6c <!ENTITY md5       "\"$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1)\"">' community.applications.plg
 sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">\n<!ENTITY pluginURL "https://juzhijian.coding.net/&github;/master/plugins/&name;.plg">' community.applications.plg
 
 echo 替换结束
@@ -45,4 +40,15 @@ ls
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
 echo "MD5:"
 md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1
+
+#md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1 > md5
+
+md5_data=$(/tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | md5sum | cut -d ' ' -f 1)
+echo "md5_data = ${md5_data}"
+password_do_md5=$(echo -n "sdw" | md5sum | cut -d ' ' -f 1)
+echo "md5 = $password_do_md5"
+
+cd /github/workspace/community.applications/plugins
+sed -i '6c <!ENTITY md5       "\"$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d" " -f1)\"">' community.applications.plg
+
 echo 打包结束
