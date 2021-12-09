@@ -38,4 +38,7 @@ echo 开始打包
 cd /tmp/GitHub/community.applications/source/community.applications/
 tar cJf community.applications-${version}-x86_64-1.txz usr
 ls
+cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
+echo "MD5:"
+md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz
 echo 打包结束
