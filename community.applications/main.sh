@@ -30,7 +30,8 @@ cp /tmp/GitHub/community.applications/source/community.applications/usr/local/em
 
 cd /github/workspace/community.applications/plugins
 
-sed -i  "s/<!ENTITY github    "Squidly271\/community.applications">/<!ENTITY coding    "p\/unraidapp\/d\/community.applications\/git\/raw">/g"  `grep "<!ENTITY github    "Squidly271\/community.applications">" -rl ./`
+#sed -i  "s/<!ENTITY github    "Squidly271\/community.applications">/<!ENTITY coding    "p\/unraidapp\/d\/community.applications\/git\/raw">/g"  `grep "<!ENTITY github    "Squidly271\/community.applications">" -rl ./`
+nl /github/workspace/community.applications/plugins/community.applications.plg | sed '2c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">'
 
 echo 替换结束
 
