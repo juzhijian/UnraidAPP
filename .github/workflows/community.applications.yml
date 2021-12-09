@@ -1,0 +1,53 @@
+# 这是一个基本工作流，可帮助您开始操作
+
+name: community.applications本地化
+
+# 控制工作流何时运行
+on:
+  #schedule:
+    # * 定时启动
+    #- cron:  '* 0/2 * * *'
+  push:
+    branches:
+      - main
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:  
+        - {
+          name: "同步community.applications",
+          os: ubuntu-latest
+          }
+        
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Sync Repo to CODING
+        uses: juzhijian/sync-repo-to-coding@master
+        env:
+            # 在 GitHub Settings->Secrets 配置 CODING_PRIVATE_KEY
+            SSH_PRIVATE_KEY: ${{ secrets.CODING_PRIVATE_KEY }}
+        with:
+            # 注意替换为你的 GitHub 源仓库地址
+            github-repo: "https://github.com/Squidly271/community.applications.git"
+            # 注意替换为你的 CODING 目标仓库地址
+            coding-repo: "git@e.coding.net:juzhijian/unraidapp/community.applications.git"
+            # 提交前运行sh
+            wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/community.applications/main.sh"
+            # 仓库名称
+            appname: "community.applications"
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo 多行命令本地化UnraidApp，
+          echo 多行命令同步成功。
+
