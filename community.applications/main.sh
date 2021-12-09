@@ -14,13 +14,19 @@ cd archive
 tar xJvf community.applications-${version}-x86_64-1.txz
 cp /github/workspace/community.applications/archive/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
 rm -rf usr
-echo 查看
-ls
-#cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
-#rm -f  ca.md5
-#find . -type f -exec md5sum {} + > /tmp/ca.md5
-#mv /tmp/ca.md5 ca.md5
+cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
 
+sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./`
+
+sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./`
+
+sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./`
+
+rm -f  ca.md5
+find . -type f -exec md5sum {} + > /tmp/ca.md5
+mv /tmp/ca.md5 ca.md5
+
+cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/archive/usr/local/emhttp/plugins/community.applications -R -v -p -f
 
 echo 替换结束
 
