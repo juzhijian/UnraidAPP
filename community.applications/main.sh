@@ -39,9 +39,12 @@ tar cJf community.applications-${version}-x86_64-1.txz usr
 ls
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
 echo "MD5:"
-md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d ' ' -f1
+#md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d ' ' -f1
 
-md5_data=$(/tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | md5sum | cut -d ' ' -f 1)
+#md5_data=$(/tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | md5sum | cut -d ' ' -f 1)
+
+md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d ' ' -f1)
+
 echo "md5_data = ${md5_data}"
 
 cd /github/workspace/community.applications/plugins
