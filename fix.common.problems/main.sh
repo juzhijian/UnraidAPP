@@ -31,6 +31,10 @@ cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
 sed -i "s/https:\/\/github.com\/Squidly271\/plugin-repository\/raw\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/plugin-repository\/git\/raw\/master\//g" $(grep "https://github.com/Squidly271/plugin-repository/raw/master/" -rl ./)
 
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
+
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
+
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/* /github/workspace/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p -f
 
 cd /github/workspace/${APPNAME}/plugins
