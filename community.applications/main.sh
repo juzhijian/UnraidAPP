@@ -35,13 +35,9 @@ echo 替换结束
 
 echo 开始打包
 cd /tmp/GitHub/community.applications/source/community.applications/
-tar cJf community.applications-${version}-x86_64-1.txz usr
-ls
-cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
-echo "MD5:"
-#md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d ' ' -f1
+tar -cJf usr/ community.applications-${version}-x86_64-1.txz
 
-#md5_data=$(/tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | md5sum | cut -d ' ' -f 1)
+cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
 
 md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | cut -d ' ' -f1)
 
