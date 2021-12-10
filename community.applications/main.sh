@@ -55,8 +55,7 @@ cd /tmp/GitHub/community.applications/source/community.applications/
 
 chmod 0755 -R .
 
-#tar -Jcvf community.applications-${version}-x86_64-1.txz usr/
-tar -Jcvf d.txz usr/
+tar -cvf community.applications-${version}-x86_64-1.txz usr/
 
 cp /tmp/GitHub/community.applications/source/community.applications/d.txz /github/workspace/community.applications/archive/community.applications-${version}-x86_64-1.txz -R -v -p -f
 
