@@ -25,6 +25,8 @@ sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/plugin-repository\/ma
 sed -i "s/https:\/\/github.com\/Squidly271\/community.applications\/raw\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g" $(grep "https://github.com/Squidly271/community.applications/raw/master/" -rl ./)
 #fix.common.problems
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/fix.common.problems\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/fix.common.problems\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/fix.common.problems/master/" -rl ./)
+#dynamix
+sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 
 
 
