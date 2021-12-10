@@ -2,7 +2,7 @@
 
 version_string=$(nl /github/workspace/community.applications/plugins/community.applications.plg | sed -n '5p')
 echo ${version_string}
-echo ${version_string:25:10}
+echo ${version_string:26:11}
 
 version=2021.12.08
 
