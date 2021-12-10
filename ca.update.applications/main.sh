@@ -37,6 +37,8 @@ cd /github/workspace/${APPNAME}/plugins
 
 sed -i "9,10c <!ENTITY github    \"p/unraidapp/d/${APPNAME}/git/raw\">\n<!ENTITY pluginURL \"https://juzhijian.coding.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
 
+sed -i "s/raw.githubusercontent.com/juzhijian.coding.net/g" $(grep "raw.githubusercontent.com" -rl ./)
+
 echo 替换结束
 #=================
 
