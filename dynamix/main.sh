@@ -20,7 +20,7 @@ cd /github/workspace/${APPNAME}/unRAIDv6
 
 sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 
-sed -i "s/https:\/\/github.com\/arberg\/dynamix\/releases\/download\/\&releaseTag;\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\/archive\//g" $(grep "https://github.com/arberg/dynamix/releases/download/&releaseTag;/" -rl ./)
+sed -i "s/https:\/\/github.com\/arberg\/dynamix\/releases\/download\/\&releaseTag;\/\&name;.txz/https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\/archive\/\&name;-aberg.txz/g" $(grep "https://github.com/arberg/dynamix/releases/download/&releaseTag;/&name;.txz" -rl ./)
 
 echo 替换结束
 #=================
@@ -39,7 +39,6 @@ echo "最后"
 echo ${releaseTag}
 
 cd /github/workspace/${APPNAME}/archive
-rm -rf dynamix.cache.dirs.txz
-wget https://github.com/arberg/dynamix/releases/download/${releaseTag}/dynamix.cache.dirs.txz
+wget -O dynamix.cache.dirs-aberg.txz https://github.com/arberg/dynamix/releases/download/${releaseTag}/dynamix.cache.dirs.txz
 
 #=====================
