@@ -37,6 +37,7 @@ echo "最后"
 echo ${releaseTag}
 
 cd /github/workspace/${APPNAME}/archive
+rm -rf dynamix.cache.dirs.txz
 wget https://github.com/arberg/dynamix/releases/download/${releaseTag}/dynamix.cache.dirs.txz
 
 #=====================
