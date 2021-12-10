@@ -46,6 +46,8 @@ echo 开始打包
 
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
 
+chmod 0755 -R .
+
 tar -cvf ${APPNAME}-${version}-x86_64-1.txz usr/
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/${APPNAME}-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
