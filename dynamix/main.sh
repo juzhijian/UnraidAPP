@@ -27,9 +27,9 @@ echo 替换结束
 releaseTag_string=$(nl /github/workspace/${APPNAME}/unRAIDv6/dynamix.cache.dirs-aberg.plg | sed -n '11p')
 echo ${releaseTag_string}
 echo ${releaseTag_string#*\"}
-releaseTag_stringa=${releaseTag_string#*\"}
-echo ${releaseTag_string_a}
-echo ${releaseTag_string_a%\"*}
-releaseTag=${releaseTag_string_a%\"*}
+#releaseTag_stringa=${releaseTag_string#*\"}
+#echo ${releaseTag_string_a}
+#echo ${releaseTag_string_a%\"*}
+releaseTag=${releaseTag_string#*\"}
 echo ${releaseTag}
 #=====================
