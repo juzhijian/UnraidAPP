@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#====获取参数====
+APPNAME=$1
+#=================
+
 #====获取版本号====
 version_string=$(nl /github/workspace/community.applications/plugins/community.applications.plg | sed -n '5p')
 echo ${version_string}
