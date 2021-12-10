@@ -53,6 +53,8 @@ echo 替换结束
 echo 开始打包
 cd /tmp/GitHub/community.applications/source/community.applications/
 
+chmod 0755 -R .
+
 tar -cvf community.applications-${version}-x86_64-1.txz usr/
 
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
