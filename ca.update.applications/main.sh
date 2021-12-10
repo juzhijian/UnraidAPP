@@ -35,7 +35,7 @@ cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/
 
 cd /github/workspace/${APPNAME}/plugins
 
-sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">\n<!ENTITY pluginURL "https://juzhijian.coding.net/&github;/master/plugins/&name;.plg">' ${APPNAME}.plg
+sed -i "9,10c <!ENTITY github    \"p/unraidapp/d/${APPNAME}/git/raw\">\n<!ENTITY pluginURL \"https://juzhijian.coding.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
 
 echo 替换结束
 #=================
