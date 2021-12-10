@@ -18,10 +18,6 @@ git config --global user.name "聚指尖"
 git config --global user.email "admin@juzhijian.com"
 #=================
 
-#====安装7zip===
-#apk add p7zip
-#=================
-
 #=====替换链接====
 echo 开始替换V${version}
 
