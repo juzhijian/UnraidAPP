@@ -16,14 +16,14 @@ cp /github/workspace/community.applications/archive/usr/local/emhttp/plugins/com
 rm -rf usr
 cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
 
-sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./`
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
 
-sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./`
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
 
-sed -i  "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g"  `grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./`
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./)
 
-rm -f  ca.md5
-find . -type f -exec md5sum {} + > /tmp/ca.md5
+rm -f ca.md5
+find . -type f -exec md5sum {} + >/tmp/ca.md5
 mv /tmp/ca.md5 ca.md5
 
 cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p -f
@@ -43,7 +43,7 @@ echo "MD5:"
 
 #md5_data=$(/tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | md5sum | cut -d ' ' -f 1)
 
-md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz|cut -d ' ' -f1)
+md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | cut -d ' ' -f1)
 
 echo "md5_data = ${md5_data}"
 
