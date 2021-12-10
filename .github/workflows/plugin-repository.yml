@@ -15,8 +15,8 @@ on:
     #tags:
     #  - v
     #特定路径
-    paths:
-      - 'plugin-repository/*'
+    #paths:
+    #  - 'plugin-repository/*'
     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
