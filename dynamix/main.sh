@@ -27,9 +27,12 @@ echo 替换结束
 releaseTag_string="<!ENTITY releaseTag \"cache_dirs_2.2.7-2\">"
 echo ${releaseTag_string}
 echo ${releaseTag_string#*\"}
+
 releaseTag_string=${releaseTag_string#*\"}
 echo ${releaseTag_string}
-echo ${releaseTag_string_a%\"*}
+echo ${releaseTag_string%\"*}
+
 releaseTag=${releaseTag_string%\"*}
+echo "最后"
 echo ${releaseTag}
 #=====================
