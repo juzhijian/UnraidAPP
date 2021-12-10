@@ -20,6 +20,8 @@ cd /github/workspace/${APPNAME}/unRAIDv6
 
 sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 
+sed -i "s/https:\/\/github.com\/arberg\/dynamix\/releases\/download\/&releaseTag;\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\/archive\//g" $(grep "https://github.com/arberg/dynamix/releases/download/&releaseTag;/" -rl ./)
+
 echo 替换结束
 #=================
 
