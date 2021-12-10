@@ -26,6 +26,6 @@ echo 替换结束
 #===替换cache.dirs====
 releaseTag_string=$(nl /github/workspace/${APPNAME}/unRAIDv6/dynamix.cache.dirs-aberg.plg | sed -n '11p')
 echo ${releaseTag_string}
-echo ${releaseTag_string:27:10}
-releaseTag=${releaseTag_string:27:10}
+echo ${releaseTag_string#*\"}
+#releaseTag=${releaseTag_string:28:10}
 #=====================
