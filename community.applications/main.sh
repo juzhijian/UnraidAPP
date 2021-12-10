@@ -56,10 +56,9 @@ cd /tmp/GitHub/community.applications/source/community.applications/
 
 chmod 0755 -R .
 
-#tar -Jcvf community.applications-${version}-x86_64-1.txz usr/
 echo "7zip压缩"
-7za a -ttar -r community.applications-${version}-x86_64-1.tar usr/
-7za a -txz -r community.applications-${version}-x86_64-1.txz community.applications-${version}-x86_64-1.tar
+7za a -ttar -r ${APPNAME}-${version}-x86_64-1.tar usr/
+7za a -txz -r ${APPNAME}-${version}-x86_64-1.txz ${APPNAME}-${version}-x86_64-1.tar
 echo "7zip压缩完成"
 
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
