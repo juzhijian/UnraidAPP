@@ -34,6 +34,8 @@ sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//htt
 
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./)
 
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/CA_notifications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/CA_notifications\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/CA_notifications/master/" -rl ./)
+
 rm -f ca.md5
 find . -type f -exec md5sum {} + >/tmp/ca.md5
 mv /tmp/ca.md5 ca.md5
