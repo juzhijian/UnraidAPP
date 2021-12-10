@@ -1,11 +1,11 @@
 #!/bin/sh
 
+#====获取版本号====
 version_string=$(nl /github/workspace/community.applications/plugins/community.applications.plg | sed -n '5p')
 echo ${version_string}
 echo ${version_string:27:10}
-
-version=2021.12.08
-
+version=${version_string:27:10}
+#=================
 echo 运行替换程序成功
 
 git config --global user.name "聚指尖"
