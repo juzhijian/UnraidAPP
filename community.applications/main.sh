@@ -11,7 +11,7 @@ echo 运行替换程序成功
 git config --global user.name "聚指尖"
 git config --global user.email "admin@juzhijian.com"
 
-echo 开始替换V$version
+echo 开始替换V${version}
 
 mkdir -p "/tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/"
 cd archive
