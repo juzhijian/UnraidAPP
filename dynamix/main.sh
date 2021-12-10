@@ -24,12 +24,12 @@ echo 替换结束
 #=================
 
 #===替换cache.dirs====
-releaseTag_string=$(nl /github/workspace/${APPNAME}/unRAIDv6/dynamix.cache.dirs-aberg.plg | sed -n '11p')
+releaseTag_string="<!ENTITY releaseTag \"cache_dirs_2.2.7-2\">"
 echo ${releaseTag_string}
 echo ${releaseTag_string#*\"}
-#releaseTag_stringa=${releaseTag_string#*\"}
-#echo ${releaseTag_string_a}
-#echo ${releaseTag_string_a%\"*}
-releaseTag=${releaseTag_string#*\"}
+releaseTag_string=${releaseTag_string#*\"}
+echo ${releaseTag_string}
+echo ${releaseTag_string_a%\"*}
+releaseTag=${releaseTag_string%\"*}
 echo ${releaseTag}
 #=====================
