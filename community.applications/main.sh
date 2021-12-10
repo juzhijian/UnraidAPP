@@ -1,5 +1,8 @@
 #!/bin/sh
 
+version_string=$(nl /github/workspace/community.applications/plugins/community.applications.plg | sed -n '5p')
+echo ${version_string:19:10}
+
 version=2021.12.08
 
 echo 运行替换程序成功
