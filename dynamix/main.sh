@@ -35,4 +35,8 @@ echo ${releaseTag_string%\"*}
 releaseTag=${releaseTag_string%\"*}
 echo "最后"
 echo ${releaseTag}
+
+cd /github/workspace/${APPNAME}/archive
+wget https://github.com/arberg/dynamix/releases/download/${releaseTag}/dynamix.cache.dirs.txz
+
 #=====================
