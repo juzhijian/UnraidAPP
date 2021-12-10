@@ -18,6 +18,7 @@ git config --global user.name "聚指尖"
 git config --global user.email "admin@juzhijian.com"
 #=================
 
+#=====替换链接====
 echo 开始替换V${version}
 
 mkdir -p "/tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/"
@@ -43,7 +44,9 @@ cd /github/workspace/community.applications/plugins
 sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">\n<!ENTITY pluginURL "https://juzhijian.coding.net/&github;/master/plugins/&name;.plg">' community.applications.plg
 
 echo 替换结束
+#=================
 
+#=====开始打包====
 echo 开始打包
 cd /tmp/GitHub/community.applications/source/community.applications/
 
@@ -59,3 +62,4 @@ cd /github/workspace/community.applications/plugins
 sed -i "6c <!ENTITY md5       "\"${md5_data}\"">" community.applications.plg
 
 echo 打包结束
+#=================
