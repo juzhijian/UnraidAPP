@@ -18,6 +18,10 @@ git config --global user.name "聚指尖"
 git config --global user.email "admin@juzhijian.com"
 #=================
 
+#====安装7zip===
+apk add p7zip
+#=================
+
 #=====替换链接====
 echo 开始替换V${version}
 
@@ -51,11 +55,16 @@ echo 替换结束
 
 #=====开始打包====
 echo 开始打包
+
 cd /tmp/GitHub/community.applications/source/community.applications/
 
 chmod 0755 -R .
 
-tar -Jcvf community.applications-${version}-x86_64-1.txz usr/
+#tar -Jcvf community.applications-${version}-x86_64-1.txz usr/
+echo "7zip压缩"
+7za a -ttar -r community.applications-${version}-x86_64-1.tar usr/
+7za a -txz -r community.applications-${version}-x86_64-1.txz community.applications-${version}-x86_64-1.tar
+echo "7zip压缩完成"
 
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
 
