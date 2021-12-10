@@ -55,13 +55,11 @@ cd /tmp/GitHub/community.applications/source/community.applications/
 
 chmod 0755 -R .
 
-makepkg -l y -c y /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz
-
-#tar -cvf community.applications-${version}-x86_64-1.txz usr/
+tar -Jcvf community.applications-${version}-x86_64-1.txz usr/
 
 cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
 
-md5_data=$(md5sum /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz | cut -d ' ' -f1)
+md5_data=$(md5sum /github/workspace/community.applications/archive/community.applications-${version}-x86_64-1.txz | cut -d ' ' -f1)
 
 echo "md5_data = ${md5_data}"
 
