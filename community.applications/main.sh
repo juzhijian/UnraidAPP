@@ -14,8 +14,8 @@ version=${version_string:27:10}
 echo 运行替换程序成功
 
 #=====设置git=====
-git config --global user.name "聚指尖"
-git config --global user.email "admin@juzhijian.com"
+git config --global user.name "juzhijian"
+git config --global user.email "princergx@live.com"
 #=================
 
 #=====替换链接====

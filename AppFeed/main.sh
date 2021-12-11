@@ -7,8 +7,8 @@ APPNAME=$1
 echo 运行替换程序成功
 
 #=====设置git=====
-git config --global user.name "聚指尖"
-git config --global user.email "admin@juzhijian.com"
+git config --global user.name "juzhijian"
+git config --global user.email "princergx@live.com"
 #=================
 
 echo 测试开始搜索文件
