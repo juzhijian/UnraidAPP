@@ -48,7 +48,7 @@ jobs:
             # 注意替换为你的 CODING 目标仓库地址
             coding-repo: "git@e.coding.net:juzhijian/unraidapp/dynamix.git"
             # 仓库名称
-            appname: "dynamix"
+            #appname: "dynamix"
             # 提交前运行sh
             wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/dynamix/main.sh"
 
