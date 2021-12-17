@@ -47,8 +47,6 @@ jobs:
             github-repo: "https://github.com/Squidly271/CA_notifications.git"
             # 注意替换为你的 CODING 目标仓库地址
             coding-repo: "git@e.coding.net:juzhijian/unraidapp/CA_notifications.git"
-            # 仓库名称
-            #appname: "CA_notifications"
             # 提交前运行sh
             #wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/dynamix/main.sh"
 

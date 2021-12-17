@@ -47,8 +47,6 @@ jobs:
             github-repo: "https://github.com/Squidly271/ca.update.applications.git"
             # 注意替换为你的 CODING 目标仓库地址
             coding-repo: "git@e.coding.net:juzhijian/unraidapp/ca.update.applications.git"
-            # 仓库名称
-            #appname: "ca.update.applications"
             # 提交前运行sh
             wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/ca.update.applications/main.sh"
 
