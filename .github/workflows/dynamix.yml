@@ -6,7 +6,7 @@ name: dynamix本地化
 on:
   schedule:
     # 每2小时定时启动
-    - cron:  '0 0/2 * * *'
+    - cron:  '0 0/12 * * *'
   push:
     #特定分支(mian),
     #branches:
