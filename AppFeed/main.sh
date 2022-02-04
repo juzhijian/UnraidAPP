@@ -30,6 +30,8 @@ sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/fix.common.problems\/
 sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 sed -i "s/https:\/\/raw.github.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.github.com/bergware/dynamix/master/" -rl ./)
 
-git gc --prune=now
+git checkout --orphan latest_branch
+git branch -D master
+git branch -m master
 
 echo 替换结束
