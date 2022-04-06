@@ -16,6 +16,7 @@ echo 测试开始搜索文件
 find / -name "applicationFeed.json"
 pwd
 ls
+echo 测试开始搜索文件结束
 
 echo 开始替换
 #ca.update.applications
