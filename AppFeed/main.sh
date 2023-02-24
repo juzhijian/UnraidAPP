@@ -23,18 +23,31 @@ ls -a
 
 echo 测试开始搜索文件结束
 
-echo 开始替换
+echo "开始替换！！"
 #ca.update.applications
+echo "替换ca.update.applications"
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/ca.update.applications\/master\//https:\/\/gitcode.net\/juzhijian\/ca.update.applications\/-\/blob\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/" -rl ./)
+
 #plugin-repository
+echo "替换plugin-repository"
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/plugin-repository\/master\//https:\/\/gitcode.net\/juzhijian\/plugin-repository\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/plugin-repository/master/" -rl ./)
+
 #community.applications
+echo "替换community.applications"
 sed -i "s/https:\/\/github.com\/Squidly271\/community.applications\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/community.applications\/-\/raw\/master\//g" $(grep "https://github.com/Squidly271/community.applications/raw/master/" -rl ./)
+
 #fix.common.problems
+echo "替换fix.common.problems"
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/fix.common.problems\/master\//https:\/\/gitcode.net\/juzhijian\/fix.common.problems\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/fix.common.problems/master/" -rl ./)
+
 #dynamix
+echo "替换dynamix"
 sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/gitcode.net\/juzhijian\/dynamix\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 sed -i "s/https:\/\/raw.github.com\/bergware\/dynamix\/master\//https:\/\/gitcode.net\/juzhijian\/dynamix\/-\/raw\/master\//g" $(grep "https://raw.github.com/bergware/dynamix/master/" -rl ./)
+
+#recycle.bin
+echo "替换recycle.bin"
+sed -i "s/https:\/\/raw.githubusercontent.com\/dlandon\/recycle.bin\/master\//https:\/\/gitcode.net\/juzhijian\/recycle.bin\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/dlandon/recycle.bin/master/" -rl ./)
 
 echo 删除旧.git文件
 rm -rf .git

@@ -31,7 +31,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "同步AppFeed",
+          name: "同步仓库",
           os: ubuntu-latest
           }
         
