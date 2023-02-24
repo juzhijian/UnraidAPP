@@ -42,6 +42,8 @@ rm -rf .git
 echo 初始化仓库
 git init
 
+echo 设置远程仓库
+git remote add origin git@gitcode.net:juzhijian/appfeed.git
 
 
 
