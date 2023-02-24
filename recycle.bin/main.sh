@@ -8,8 +8,8 @@ echo "仓库名称=${APPNAME}"
 #====获取版本号====
 version_string=$(nl /github/workspace/recycle.bin/recycle.bin.plg | sed -n '5p')
 echo ${version_string}
-echo ${version_string:29:8}
-version=${version_string:29:8}
+echo ${version_string:25:12}
+version=${version_string:25:12}
 #=================
 
 #=====设置git=====
@@ -63,7 +63,7 @@ md5_data=$(md5sum /github/workspace/${APPNAME}/${APPNAME}-${version}.txz | cut -
 echo "md5_data = ${md5_data}"
 
 cd /github/workspace/${APPNAME}/
-sed -i "10c <!ENTITY md5       "\"${md5_data}\"">" ${APPNAME}.plg
+sed -i "10c <!ENTITY md5		"\"${md5_data}\"">" ${APPNAME}.plg
 
 echo 打包结束
 #=================
