@@ -29,13 +29,13 @@ cp /github/workspace/community.applications/archive/usr/local/emhttp/plugins/com
 rm -rf usr
 cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/gitcode.net\/juzhijian\/community-applications-moderators\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/gitcode.net\/juzhijian\/appfeed\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/community.applications\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/gitcode.net\/juzhijian\/community.applications\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/CA_notifications\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/CA_notifications\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/CA_notifications/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/CA_notifications\/master\//https:\/\/gitcode.net\/juzhijian\/ca_notifications\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/CA_notifications/master/" -rl ./)
 
 rm -f ca.md5
 find . -type f -exec md5sum {} + >/tmp/ca.md5
