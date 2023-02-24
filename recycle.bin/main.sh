@@ -37,7 +37,7 @@ cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/* /github/workspace/${APPNAME}/sourc
 #=====更新plg====
 cd /github/workspace/${APPNAME}/
 
-sed -i "7,8c <!ENTITY gitURL		\"https://gitcode.net/juzhijian/${APPNAME}/-/raw/&name;/master\">\n<!ENTITY pluginURL	\"&gitURL;/&name;.plg\">" ${APPNAME}.plg
+sed -i "7,8c <!ENTITY gitURL		\"https://gitcode.net/juzhijian/&name;/-/raw/master\">\n<!ENTITY pluginURL	\"&gitURL;/&name;.plg\">" ${APPNAME}.plg
 
 echo 替换结束
 #=================
