@@ -29,15 +29,17 @@ cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/${APPNAME}/* /t
 rm -rf usr
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
-sed -i "s/https:\/\/github.com\/Squidly271\/plugin-repository\/raw\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/plugin-repository\/git\/raw\/master\//g" $(grep "https://github.com/Squidly271/plugin-repository/raw/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/Squidly271\/plugin-repository\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/plugin-repository\/-\/raw\/master\//g" $(grep "https://github.com/Squidly271/plugin-repository/raw/master/" -rl ./)
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/* /github/workspace/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p -f
 
+#=====更新plg====
+
 cd /github/workspace/${APPNAME}/plugins
 
-sed -i "9,10c <!ENTITY github    \"p/unraidapp/d/${APPNAME}/git/raw\">\n<!ENTITY pluginURL \"https://juzhijian.coding.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
+sed -i "9,10c <!ENTITY github    \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
 
-sed -i "s/raw.githubusercontent.com/juzhijian.coding.net/g" $(grep "raw.githubusercontent.com" -rl ./)
+sed -i "s/raw.githubusercontent.com/gitcode.net/g" $(grep "raw.githubusercontent.com" -rl ./)
 
 echo 替换结束
 #=================
