@@ -58,7 +58,7 @@ echo "压缩完成"
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}-${version}.tgz /github/workspace/${APPNAME}/ -R -v -p -f
 
-md5_data=$(md5sum /github/workspace/${APPNAME}/${APPNAME}-${version}.txz | cut -d ' ' -f1)
+md5_data=$(md5sum /github/workspace/${APPNAME}/${APPNAME}-${version}.tgz | cut -d ' ' -f1)
 
 echo "md5_data = ${md5_data}"
 
