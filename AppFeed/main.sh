@@ -15,6 +15,7 @@ git config --global user.email "princergx@live.com"
 echo 测试开始搜索文件
 find / -name "applicationFeed.json"
 pwd
+echo 显示文件目录
 ls
 echo 测试开始搜索文件结束
 
