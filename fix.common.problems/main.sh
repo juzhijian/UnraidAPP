@@ -37,6 +37,7 @@ sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//htt
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/* /github/workspace/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p -f
 
+#=====更新plg====
 cd /github/workspace/${APPNAME}/plugins
 
 sed -i "9,10c <!ENTITY github    \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
