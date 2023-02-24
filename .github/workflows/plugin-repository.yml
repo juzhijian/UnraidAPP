@@ -17,6 +17,7 @@ on:
     #特定路径
     paths:
       - 'plugin-repository/*'
+      - '.github/workflows/plugin-repository.yml'
     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,16 +38,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Sync Repo to CODING
-        uses: juzhijian/sync-repo-to-coding@master
+      - name: Sync Repo to GITCODE
+        uses: juzhijian/sync-repo-to-gitcode@main
         env:
-            # 在 GitHub Settings->Secrets 配置 CODING_PRIVATE_KEY
-            SSH_PRIVATE_KEY: ${{ secrets.CODING_PRIVATE_KEY }}
+            # 在 GitHub Settings->Secrets 配置 GITCODE_PRIVATE_KEY
+            SSH_PRIVATE_KEY: ${{ secrets.GITCODE_PRIVATE_KEY }}
         with:
             # 注意替换为你的 GitHub 源仓库地址
             github-repo: "https://github.com/Squidly271/plugin-repository.git"
-            # 注意替换为你的 CODING 目标仓库地址
-            coding-repo: "git@e.coding.net:juzhijian/unraidapp/plugin-repository.git"
+            # 注意替换为你的 gitcode 目标仓库地址
+            gitcode-repo: "git@gitcode.net:juzhijian/plugin-repository.git"
             # 提交前运行sh
             #wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/AppFeed/main.sh"
 
