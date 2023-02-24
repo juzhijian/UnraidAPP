@@ -46,7 +46,7 @@ cp /tmp/GitHub/community.applications/source/community.applications/usr/local/em
 #=====更新plg====
 cd /github/workspace/community.applications/plugins
 
-sed -i '9,10c <!ENTITY github    "p/unraidapp/d/community.applications/git/raw">\n<!ENTITY pluginURL "https://juzhijian.coding.net/&github;/master/plugins/&name;.plg">' community.applications.plg
+sed -i '9,10c <!ENTITY github    "juzhijian/community.applications/-/raw">\n<!ENTITY pluginURL "https://gitcode.net/&github;/master/plugins/&name;.plg">' community.applications.plg
 
 sed -i "s/raw.githubusercontent.com/juzhijian.coding.net/g" $(grep "raw.githubusercontent.com" -rl ./)
 
