@@ -30,7 +30,14 @@ cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/${APPNAME}/* /t
 rm -rf usr
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/gitcode.net\/juzhijian\/community-applications-moderators\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
+#Community-Applications-Moderators
+NAME="Community-Applications-Moderators"
+AUTHOR="Squidly271"
+echo "替换 ${AUTHOR} 的 ${NAME}"
+sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
+
+
+#sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/gitcode.net\/juzhijian\/community-applications-moderators\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
 
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/gitcode.net\/juzhijian\/appfeed\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
 
