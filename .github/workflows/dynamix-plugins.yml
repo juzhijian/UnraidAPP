@@ -1,0 +1,59 @@
+# 这是一个基本工作流，可帮助您开始操作
+
+name: dynamix-plugins本地化
+
+# 控制工作流何时运行
+on:
+  schedule:
+    # 每2小时定时启动
+    - cron:  '0 0/12 * * *'
+  push:
+    #特定分支(mian),
+    #branches:
+    #  - main
+    #特定tsgs
+    #tags:
+    #  - v
+    #特定路径
+    paths:
+      - 'dynamix-plugins/*'
+      - '.github/workflows/dynamix-plugins.yml'
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:  
+        - {
+          name: "克隆仓库",
+          os: ubuntu-latest
+          }
+        
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Sync Repo to GITCODE
+        uses: juzhijian/sync-repo-to-gitcode@main
+        env:
+            # 在 GitHub Settings->Secrets 配置 CODING_PRIVATE_KEY
+            SSH_PRIVATE_KEY: ${{ secrets.GITCODE_PRIVATE_KEY }}
+        with:
+            # 注意替换为你的 GitHub 源仓库地址
+            github-repo: "https://github.com/dlandon/docker.templates.git"
+            # 注意替换为你的 GITCODE 目标仓库地址
+            gitcode-repo: "https://github.com/dlandon/docker.templates.git"
+            # 提交前运行sh
+            #wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/community.applications/main.sh"
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo 多行命令本地化UnraidApp，
+          echo 多行命令同步成功。
+
