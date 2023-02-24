@@ -22,11 +22,11 @@ rm -rf dynamix.cache.dirs-aberg.plg
 
 wegt https://raw.githubusercontent.com/arberg/dynamix/master/unRAIDv6/dynamix.cache.dirs-aberg.plg
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/bergware\/dynamix\/master\//https:\/\/gitcode.net\/juzhijian\/dynamix\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/bergware/dynamix/master/" -rl ./)
 
-sed -i "s/https:\/\/github.com\/arberg\/dynamix\/releases\/download\/\&releaseTag;\/\&name;.txz/https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\/archive\/\&name;-aberg.txz/g" $(grep "https://github.com/arberg/dynamix/releases/download/&releaseTag;/&name;.txz" -rl ./)
+sed -i "s/https:\/\/github.com\/arberg\/dynamix\/releases\/download\/\&releaseTag;\/\&name;.txz/https:\/\/gitcode.net\/juzhijian\/dynamix\/-\/raw\/master\/archive\/\&name;-aberg.txz/g" $(grep "https://github.com/arberg/dynamix/releases/download/&releaseTag;/&name;.txz" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/arberg\/dynamix\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/dynamix\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/arberg/dynamix/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/arberg\/dynamix\/master\//https:\/\/gitcode.net\/juzhijian\/dynamix\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/arberg/dynamix/master/" -rl ./)
 
 echo 替换结束
 #=================
