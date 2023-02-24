@@ -47,7 +47,7 @@ jobs:
             # 注意替换为你的 GitHub 源仓库地址
             github-repo: "https://github.com/dlandon/docker.templates.git"
             # 注意替换为你的 GITCODE 目标仓库地址
-            gitcode-repo: "https://github.com/dlandon/docker.templates.git"
+            gitcode-repo: "git@gitcode.net:juzhijian/dynamix-plugins.git"
             # 提交前运行sh
             #wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/community.applications/main.sh"
 
