@@ -61,8 +61,7 @@ AUTHOR="dlandon"
 echo "替换 ${AUTHOR} 的 ${NAME}"
 sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
 sed -i "s/https:\/\/github.com\/${AUTHOR}\/${NAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${NAME}/raw/master/" -rl ./)
-sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${NAME}/master/" -rl ./)
-
+#sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${NAME}/master/" -rl ./)
 
 echo 删除旧.git文件
 rm -rf .git
