@@ -17,6 +17,7 @@ on:
     #特定路径
     paths:
       - 'community.applications/*'
+      - '.github/workflows/community.applications.yml'
     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,7 +39,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Sync Repo to GITCODE
-        uses: juzhijian/sync-repo-to-gitcode@master
+        uses: juzhijian/sync-repo-to-gitcode@main
         env:
             # 在 GitHub Settings->Secrets 配置 CODING_PRIVATE_KEY
             SSH_PRIVATE_KEY: ${{ secrets.GITCODE_PRIVATE_KEY }}
