@@ -30,6 +30,7 @@ cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/${APPNAME}/* /t
 rm -rf usr
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
+#=============替换内容
 #Community-Applications-Moderators
 NAME="Community-Applications-Moderators"
 AUTHOR="Squidly271"
@@ -53,11 +54,9 @@ NAME="CA_notifications"
 AUTHOR="Squidly271"
 echo "替换 ${AUTHOR} 的 ${NAME}"
 sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/${AUTHOR}\/${NAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${NAME}/raw/master/" -rl ./)
 
-
-#sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/community.applications\/master\//https:\/\/gitcode.net\/juzhijian\/community.applications\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/community.applications/master/" -rl ./)
-
-#sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/CA_notifications\/master\//https:\/\/gitcode.net\/juzhijian\/ca_notifications\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/CA_notifications/master/" -rl ./)
+#===============替换
 
 rm -f ca.md5
 find . -type f -exec md5sum {} + >/tmp/ca.md5
