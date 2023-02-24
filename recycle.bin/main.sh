@@ -63,7 +63,7 @@ md5_data=$(md5sum /github/workspace/${APPNAME}/${APPNAME}-${version}.tgz | cut -
 echo "md5_data = ${md5_data}"
 
 cd /github/workspace/${APPNAME}/
-sed -i "10c <!ENTITY md5		"\"${md5_data}\"">" ${APPNAME}.plg
+sed -i "10c <!ENTITY MD5		"\"${md5_data}\"">" ${APPNAME}.plg
 
 echo 打包结束
 #=================
