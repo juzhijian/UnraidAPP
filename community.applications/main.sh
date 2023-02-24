@@ -48,7 +48,7 @@ cd /github/workspace/community.applications/plugins
 
 sed -i '9,10c <!ENTITY github    "juzhijian/community.applications/-/raw">\n<!ENTITY pluginURL "https://gitcode.net/&github;/master/plugins/&name;.plg">' community.applications.plg
 
-sed -i "s/raw.githubusercontent.com/juzhijian.coding.net/g" $(grep "raw.githubusercontent.com" -rl ./)
+sed -i "s/raw.githubusercontent.com/gitcode.net" $(grep "raw.githubusercontent.com" -rl ./)
 
 echo 替换结束
 #=================
