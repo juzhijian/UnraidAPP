@@ -8,8 +8,8 @@ echo "仓库名称=${APPNAME}"
 #====获取版本号====
 version_string=$(nl /github/workspace/recycle.bin/recycle.bin.plg | sed -n '5p')
 echo ${version_string}
-echo ${version_string:27:10}
-version=${version_string:27:10}
+echo ${version_string:29:8}
+version=${version_string:29:8}
 #=================
 
 #=====设置git=====
