@@ -26,7 +26,7 @@ echo 测试开始搜索文件结束
 echo "开始替换！！"
 #ca.update.applications
 echo "替换ca.update.applications"
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/ca.update.applications\/master\//https:\/\/gitcode.net\/juzhijian\/ca.update.applications\/-\/blob\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/ca.update.applications\/master\//https:\/\/gitcode.net\/juzhijian\/ca.update.applications\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/" -rl ./)
 
 #plugin-repository
 echo "替换plugin-repository"
@@ -56,12 +56,12 @@ sed -i "s/https:\/\/github.com\/dlandon\/recycle.bin\/raw\/master\//https:\/\/gi
 #sed -i "s/https:\/\/github.com\/dlandon\/docker.templates\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/docker.templates\/-\/raw\/master\//g" $(grep "https://github.com/dlandon/recycle.bin/raw/master/" -rl ./)
 
 #docker.templates
-appname="docker.templates"
-author="dlandon"
-echo "替换 ${AUTHOR} 的 ${APPNAME}"
-sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${APPNAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${APPNAME}/master/" -rl ./)
-sed -i "s/https:\/\/github.com\/${AUTHOR}\/${APPNAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${APPNAME}/raw/master/" -rl ./)
-sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${APPNAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${APPNAME}/master/" -rl ./)
+NAME="docker.templates"
+AUTHOR="dlandon"
+echo "替换 ${AUTHOR} 的 ${NAME}"
+sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/${AUTHOR}\/${NAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${NAME}/raw/master/" -rl ./)
+sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${NAME}/master/" -rl ./)
 
 
 echo 删除旧.git文件
