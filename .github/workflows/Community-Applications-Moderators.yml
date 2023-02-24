@@ -31,7 +31,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "同步Community-Applications-Moderators",
+          name: "克隆仓库",
           os: ubuntu-latest
           }
         

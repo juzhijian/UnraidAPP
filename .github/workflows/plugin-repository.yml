@@ -31,7 +31,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "同步plugin-repository",
+          name: "克隆仓库",
           os: ubuntu-latest
           }
         

@@ -31,7 +31,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "同步CA_notifications",
+          name: "克隆仓库",
           os: ubuntu-latest
           }
         
