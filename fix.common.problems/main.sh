@@ -29,19 +29,19 @@ cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/${APPNAME}/* /t
 rm -rf usr
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
-sed -i "s/https:\/\/github.com\/Squidly271\/plugin-repository\/raw\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/plugin-repository\/git\/raw\/master\//g" $(grep "https://github.com/Squidly271/plugin-repository/raw/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/Squidly271\/plugin-repository\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/plugin-repository\/-\/raw\/master\//g" $(grep "https://github.com/Squidly271/plugin-repository/raw/master/" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/Community-Applications-Moderators\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/gitcode.net\/juzhijian\/community-applications-moderators\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
 
-sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/juzhijian.coding.net\/p\/unraidapp\/d\/AppFeed\/git\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
+sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/AppFeed\/master\//https:\/\/gitcode.net\/juzhijian\/appfeed\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/AppFeed/master/" -rl ./)
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/* /github/workspace/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p -f
 
 cd /github/workspace/${APPNAME}/plugins
 
-sed -i "9,10c <!ENTITY github    \"p/unraidapp/d/${APPNAME}/git/raw\">\n<!ENTITY pluginURL \"https://juzhijian.coding.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
+sed -i "9,10c <!ENTITY github    \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
 
-sed -i "s/raw.githubusercontent.com/juzhijian.coding.net/g" $(grep "raw.githubusercontent.com" -rl ./)
+sed -i "s/raw.githubusercontent.com/gitcode.net/g" $(grep "raw.githubusercontent.com" -rl ./)
 
 echo 替换结束
 #=================
