@@ -22,12 +22,13 @@ git config --global user.email "princergx@live.com"
 #=====替换链接====
 echo 开始替换V${version}
 
-mkdir -p "/tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/"
+mkdir -p "/tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/"
+
 cd archive
-tar xJvf community.applications-${version}-x86_64-1.txz
-cp /github/workspace/community.applications/archive/usr/local/emhttp/plugins/community.applications/* /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p
+tar xJvf ${APPNAME}-${version}-x86_64-1.txz
+cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/${APPNAME}/* /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p
 rm -rf usr
-cd /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications
+cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}
 
 sed -i "s/https:\/\/raw.githubusercontent.com\/Squidly271\/Community-Applications-Moderators\/master\//https:\/\/gitcode.net\/juzhijian\/community-applications-moderators\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/Squidly271/Community-Applications-Moderators/master/" -rl ./)
 
@@ -41,12 +42,12 @@ rm -f ca.md5
 find . -type f -exec md5sum {} + >/tmp/ca.md5
 mv /tmp/ca.md5 ca.md5
 
-cp /tmp/GitHub/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications/* /github/workspace/community.applications/source/community.applications/usr/local/emhttp/plugins/community.applications -R -v -p -f
+cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME}/* /github/workspace/${APPNAME}/source/${APPNAME}/usr/local/emhttp/plugins/${APPNAME} -R -v -p -f
 
 #=====更新plg====
-cd /github/workspace/community.applications/plugins
+cd /github/workspace/${APPNAME}/plugins
 
-sed -i '9,10c <!ENTITY github    "juzhijian/community.applications/-/raw">\n<!ENTITY pluginURL "https://gitcode.net/&github;/master/plugins/&name;.plg">' community.applications.plg
+sed -i "9,10c <!ENTITY github    \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/plugins/&name;.plg\">" ${APPNAME}.plg
 
 sed -i "s/raw.githubusercontent.com/gitcode.net/g" $(grep "raw.githubusercontent.com" -rl ./)
 
@@ -57,7 +58,7 @@ echo 替换结束
 #=====开始打包====
 echo 开始打包
 
-cd /tmp/GitHub/community.applications/source/community.applications/
+cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
 
 chmod 0755 -R .
 
@@ -66,14 +67,14 @@ echo "7zip压缩"
 7za a -txz -r ${APPNAME}-${version}-x86_64-1.txz ${APPNAME}-${version}-x86_64-1.tar
 echo "7zip压缩完成"
 
-cp /tmp/GitHub/community.applications/source/community.applications/community.applications-${version}-x86_64-1.txz /github/workspace/community.applications/archive/ -R -v -p -f
+cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/${APPNAME}-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
 
-md5_data=$(md5sum /github/workspace/community.applications/archive/community.applications-${version}-x86_64-1.txz | cut -d ' ' -f1)
+md5_data=$(md5sum /github/workspace/${APPNAME}/archive/${APPNAME}-${version}-x86_64-1.txz | cut -d ' ' -f1)
 
 echo "md5_data = ${md5_data}"
 
-cd /github/workspace/community.applications/plugins
-sed -i "6c <!ENTITY md5       "\"${md5_data}\"">" community.applications.plg
+cd /github/workspace/${APPNAME}/plugins
+sed -i "6c <!ENTITY md5       "\"${md5_data}\"">" ${APPNAME}.plg
 
 echo 打包结束
 #=================
