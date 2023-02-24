@@ -48,6 +48,21 @@ sed -i "s/https:\/\/raw.github.com\/bergware\/dynamix\/master\//https:\/\/gitcod
 #recycle.bin
 echo "替换recycle.bin"
 sed -i "s/https:\/\/raw.githubusercontent.com\/dlandon\/recycle.bin\/master\//https:\/\/gitcode.net\/juzhijian\/recycle.bin\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/dlandon/recycle.bin/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/dlandon\/recycle.bin\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/recycle.bin\/-\/raw\/master\//g" $(grep "https://github.com/dlandon/recycle.bin/raw/master/" -rl ./)
+
+#docker.templates
+#echo "替换docker.templates"
+#sed -i "s/https:\/\/raw.githubusercontent.com\/dlandon\/docker.templates\/master\//https:\/\/gitcode.net\/juzhijian\/docker.templates\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/dlandon/docker.templates/master/" -rl ./)
+#sed -i "s/https:\/\/github.com\/dlandon\/docker.templates\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/docker.templates\/-\/raw\/master\//g" $(grep "https://github.com/dlandon/recycle.bin/raw/master/" -rl ./)
+
+#docker.templates
+appname="docker.templates"
+author="dlandon"
+echo "替换 ${AUTHOR} 的 ${APPNAME}"
+sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${APPNAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${APPNAME}/master/" -rl ./)
+sed -i "s/https:\/\/github.com\/${AUTHOR}\/${APPNAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${APPNAME}/raw/master/" -rl ./)
+sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${APPNAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${APPNAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${APPNAME}/master/" -rl ./)
+
 
 echo 删除旧.git文件
 rm -rf .git
