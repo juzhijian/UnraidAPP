@@ -49,7 +49,7 @@ cp /tmp/GitHub/${APPNAME}/source/NerdPack/* /github/workspace/${APPNAME}/source/
 #=====更新plg=====
 cd /github/workspace/${APPNAME}/plugin
 
-sed -i "9c <!ENTITY github    \"https://gitcode.net/juzhijian/unRAID-&name;/-/raw/master\">" NerdPack.plg
+sed -i "8c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/unRAID-&name;/-/raw/master\">" NerdPack.plg
 
 echo 替换结束
 #=================
