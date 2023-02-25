@@ -46,7 +46,7 @@ grep -rl "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" ./ | xarg
 
 cp /tmp/GitHub/${APPNAME}/source/NerdPack/* /github/workspace/${APPNAME}/source/NerdPack/ -R -v -p -f
 
-#=====更新plg====
+#=====更新plg=====
 cd /github/workspace/${APPNAME}/plugin
 
 sed -i "9c <!ENTITY github    \"https://gitcode.net/juzhijian/unRAID-&name;/-/raw/master\">" NerdPack.plg
