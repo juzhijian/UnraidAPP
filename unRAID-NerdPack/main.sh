@@ -69,5 +69,13 @@ echo "7zip压缩完成"
 
 cp /tmp/GitHub/${APPNAME}/source/NerdPack/NerdPack-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
 
+cd /github/workspace/${APPNAME}/archive/
+
+rm -f NerdPack-${version}-x86_64-1.md5
+
+find NerdPack-${version}-x86_64-1.txz -type f -exec md5sum {} + >/github/workspace/${APPNAME}/archive/NerdPack-${version}-x86_64-1.md5
+
+find . -type f -exec md5sum {} + >/tmp/ca.md5
+
 echo 打包结束
 #=================
