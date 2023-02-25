@@ -45,7 +45,7 @@ jobs:
             SSH_PRIVATE_KEY: ${{ secrets.GITCODE_PRIVATE_KEY }}
         with:
             # 注意替换为你的 GitHub 源仓库地址
-            github-repo: "https://github.com/Squidly271/community.ca.backup.git"
+            github-repo: "https://github.com/Squidly271/ca.backup.git"
             # 注意替换为你的 GITCODE 目标仓库地址
             gitcode-repo: "git@gitcode.net:juzhijian/ca.backup.git"
             # 提交前运行sh
