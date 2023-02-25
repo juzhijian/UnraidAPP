@@ -81,7 +81,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
 
     $pkg_gitname = array_values($pkg_matches)[0]['name'];
     $pkg_file    = $pkg_path.$pkg_gitname;
-    $pkg_url     = array_values($pkg_matches)[0]['"path'];
+    $pkg_url     = "https://gitcode.net/juzhijian/unraid-nerdpack/-/raw/master/".array_values($pkg_matches)[0]['path'];
     $pkg_sha1    = array_values($pkg_matches)[0]['sha'];
 
     //check if plugin is dependent on package
