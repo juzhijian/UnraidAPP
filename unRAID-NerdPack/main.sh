@@ -30,6 +30,8 @@ cd /tmp/GitHub/${APPNAME}/source/NerdPack/
 
 tar xJvf NerdPack-${version}-x86_64-1.txz
 
+rm -rf NerdPack-${version}-x86_64-1.txz
+
 #=============替换内容
 
 #unRAID-NerdPack
