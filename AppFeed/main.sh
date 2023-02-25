@@ -56,12 +56,20 @@ sed -i "s/https:\/\/github.com\/dlandon\/recycle.bin\/raw\/master\//https:\/\/gi
 #sed -i "s/https:\/\/github.com\/dlandon\/docker.templates\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/docker.templates\/-\/raw\/master\//g" $(grep "https://github.com/dlandon/recycle.bin/raw/master/" -rl ./)
 
 #docker.templates
+#NAME="docker.templates"
+#AUTHOR="dlandon"
+#echo "替换 ${AUTHOR} 的 ${NAME}"
+#sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
+#sed -i "s/https:\/\/github.com\/${AUTHOR}\/${NAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${NAME}/raw/master/" -rl ./)
+#sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${NAME}/master/" -rl ./)
+
+#docker.templates
 NAME="docker.templates"
 AUTHOR="dlandon"
 echo "替换 ${AUTHOR} 的 ${NAME}"
 sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
-sed -i "s/https:\/\/github.com\/${AUTHOR}\/${NAME}\/raw\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://github.com/${AUTHOR}/${NAME}/raw/master/" -rl ./)
-#sed -i "s/https:\/\/raw.github.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.github.com/${AUTHOR}/${NAME}/master/" -rl ./)
+
+
 
 echo 删除旧.git文件
 rm -rf .git
