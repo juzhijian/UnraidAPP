@@ -50,7 +50,7 @@ cp /tmp/GitHub/${APPNAME}/source/NerdPack/* /github/workspace/${APPNAME}/source/
 
 #===============替换结束
 
-#=====更新plg====
+#=====更新plg=====
 cd /github/workspace/${APPNAME}/plugin
 
 sed -i "8c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/unRAID-&name;/-/raw/master\">" NerdPack.plg
