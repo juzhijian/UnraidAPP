@@ -3,7 +3,7 @@
  # @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  # @Date: 2022-04-29 13:26:24
  # @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- # @LastEditTime: 2023-02-25 10:32:59
+ # @LastEditTime: 2023-02-25 10:35:18
  # @FilePath: \我的世界服务器d:\SourceTree\Unraid\UnraidAPP\community.applications\main.sh
  # @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 ### 
@@ -62,7 +62,7 @@ NAME="CA_notifications"
 AUTHOR="Squidly271"
 echo "替换 ${AUTHOR} 的 ${NAME}"
 #sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g" $(grep "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" -rl ./)
-grep -rl "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" ./tmp/GitHub/${APPNAME} | xargs sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g"
+grep -rl "https://raw.githubusercontent.com/${AUTHOR}/${NAME}/master/" ./ | xargs sed -i "s/https:\/\/raw.githubusercontent.com\/${AUTHOR}\/${NAME}\/master\//https:\/\/gitcode.net\/juzhijian\/${NAME}\/-\/raw\/master\//g"
 
 #===============替换
 
