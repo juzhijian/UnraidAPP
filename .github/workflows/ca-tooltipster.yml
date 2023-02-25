@@ -49,7 +49,7 @@ jobs:
             # 注意替换为你的 GITCODE 目标仓库地址
             gitcode-repo: "git@gitcode.net:juzhijian/ca-tooltipster.git"
             # 提交前运行sh
-            wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/ca-tooltipster/main.sh"
+            #wgetsh: "https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/ca-tooltipster/main.sh"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
