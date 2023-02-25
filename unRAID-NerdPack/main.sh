@@ -6,7 +6,7 @@ echo "仓库名称=${APPNAME}"
 #=================
 
 #====获取版本号====
-version_string=$(nl /github/workspace/${APPNAME}/plugins/NerdPack.plg | sed -n '6p')
+version_string=$(nl /github/workspace/${APPNAME}/plugin/NerdPack.plg | sed -n '6p')
 echo ${version_string}
 echo ${version_string:27:10}
 version=${version_string:27:10}
