@@ -46,6 +46,9 @@ cd /tmp/GitHub/${APPNAME}/source/NerdPack/usr/local/emhttp/plugins/NerdPack/scri
 rm -f packagemanager
 wget https://raw.githubusercontent.com/juzhijian/UnraidAPP/main/unRAID-NerdPack/packagemanager
 
+#https://gitcode.net/api/v4/projects/238302/repository/tree?path=packages/6.11
+#https://api.github.com/repos/dmacias72/unRAID-NerdPack/contents/packages/6.1
+
 cp /tmp/GitHub/${APPNAME}/source/NerdPack/* /github/workspace/${APPNAME}/source/NerdPack/ -R -v -p -f
 
 #===============替换结束
