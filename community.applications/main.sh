@@ -89,12 +89,6 @@ echo 替换结束
 #=====开始打包====
 echo “开始打包”
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
-echo “测试”
-ls
-echo “测试2”
-cd usr
-pwd
-
 
 chmod 0755 -R .
 
@@ -103,6 +97,10 @@ echo "7zip压缩"
 7z a -txz -r ${APPNAME}-${version}-x86_64-1.txz ${APPNAME}-${version}-x86_64-1.tar
 
 echo "7zip压缩完成"
+echo “测试”
+ls
+echo “测试2”
+pwd
 
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/${APPNAME}-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
 
