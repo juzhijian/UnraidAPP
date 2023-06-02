@@ -87,9 +87,10 @@ echo 替换结束
 
 
 #=====开始打包====
-echo 开始打包
-
+echo “开始打包”
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
+echo “测试”
+ls
 
 chmod 0755 -R .
 
