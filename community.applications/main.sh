@@ -10,15 +10,9 @@ version_string=$(nl /github/workspace/${APPNAME}/plugins/${APPNAME}.plg | sed -n
 echo ${version_string}
 echo ${version_string:27:10}
 
-if [[ "${version_string:38:1}" == ">" ]]; then
-    echo "版本为纯数字"
-    version=${version_string:27:10}
-fi
 
-if [[ "${version_string:38:1}" != ">" ]]; then
-    echo "版本带英文"
-    version=${version_string:27:11}
-fi
+
+version=${version_string:27:10}
 
 #=================
 
