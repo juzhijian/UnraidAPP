@@ -92,6 +92,7 @@ cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
 echo “测试”
 ls
 echo “测试2”
+cd usr
 pwd
 
 chmod 0755 -R .
