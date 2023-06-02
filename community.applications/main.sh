@@ -91,6 +91,8 @@ echo “开始打包”
 cd /tmp/GitHub/${APPNAME}/source/${APPNAME}/
 echo “测试”
 ls
+echo “测试2”
+pwd
 
 chmod 0755 -R .
 
