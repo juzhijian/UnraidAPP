@@ -22,7 +22,7 @@ git config --global user.email "princergx@live.com"
 #=====更新plg====
 cd /github/workspace/${APPNAME}/
 
-sed -i "10,11c <!ENTITY github \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/&plugin;.plg\">" ${APPNAME}.plg
+sed -i "10,11c <!ENTITY github \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/&plugin;.plg\">" vmbackup.plg
 
 sed -i "s/raw.githubusercontent.com\//jtok/gitcode.net\//juzhijian/g" $(grep "raw.githubusercontent.com\//jtok" -rl ./)
 
