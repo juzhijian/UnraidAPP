@@ -70,8 +70,8 @@ cd /tmp/GitHub/${APPNAME}/source/NerdPack/
 chmod 0755 -R .
 
 echo "7zip压缩"
-7za a -ttar -r NerdPack-${version}-x86_64-1.tar usr/
-7za a -txz -r NerdPack-${version}-x86_64-1.txz NerdPack-${version}-x86_64-1.tar
+7z a -ttar -r NerdPack-${version}-x86_64-1.tar usr/
+7z a -txz -r NerdPack-${version}-x86_64-1.txz NerdPack-${version}-x86_64-1.tar
 echo "7zip压缩完成"
 
 cp /tmp/GitHub/${APPNAME}/source/NerdPack/NerdPack-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
