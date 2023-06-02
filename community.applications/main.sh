@@ -9,6 +9,7 @@ echo "仓库名称=${APPNAME}"
 version_string=$(nl /github/workspace/${APPNAME}/plugins/${APPNAME}.plg | sed -n '5p')
 echo ${version_string}
 echo ${version_string:27:10}
+echo ${version_string:37:1}
 version=${version_string:27:10}
 #=================
 
