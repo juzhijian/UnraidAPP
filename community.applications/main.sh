@@ -102,7 +102,7 @@ echo "7zip压缩"
 #7za a -ttar -r ${APPNAME}-${version}-x86_64-1.tar usr/
 #7za a -txz -r ${APPNAME}-${version}-x86_64-1.txz ${APPNAME}-${version}-x86_64-1.tar
 
-7z a -txz -r ${APPNAME}-${version}-x86_64-1.tar usr/
+7z a -txz -r ${APPNAME}-${version}-x86_64-1.txz usr/
 
 echo "7zip压缩完成"
 
