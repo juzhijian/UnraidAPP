@@ -95,6 +95,7 @@ echo “测试2”
 cd usr
 pwd
 
+
 chmod 0755 -R .
 
 echo "7zip压缩"
