@@ -7,12 +7,14 @@ echo "仓库名称=${APPNAME}"
 
 #====获取版本号====
 version_string=$(nl /github/workspace/${APPNAME}/vmbackup.plg | sed -n '6p')
-version_string=${version_string#*\"}
+
 echo 从左边开始删除第一个 \" 号及左边的所有字符
-echo 结果为：echo ${version_string}
-version_string=${version_string%*\"}
+version_string=${version_string#*\"}
+echo 结果为：${version_string}
+
 echo 从右边开始删除第一个 \" 号及右边的所有字符
-echo 结果为：echo ${version_string}
+version_string=${version_string%*\"}
+echo 结果为：${version_string}
 
 #echo ${version_string}
 #echo ${version_string:28:10}
