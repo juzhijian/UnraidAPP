@@ -31,7 +31,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "同步仓库",
+          name: "同步仓库1",
           os: ubuntu-latest
           }
         
