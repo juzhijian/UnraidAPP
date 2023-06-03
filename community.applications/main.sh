@@ -7,18 +7,26 @@ echo "仓库名称=${APPNAME}"
 
 #====获取版本号====
 version_string=$(nl /github/workspace/${APPNAME}/plugins/${APPNAME}.plg | sed -n '5p')
-echo ${version_string}
-echo ${version_string:27:10}
+#echo ${version_string}
+#echo ${version_string:27:10}
 
-if [[ "${version_string:38:1}" == ">" ]]; then
-    echo "版本为纯数字"
-    version=${version_string:27:10}
-fi
+#if [[ "${version_string:38:1}" == ">" ]]; then
+#    echo "版本为纯数字"
+#    version=${version_string:27:10}
+#fi
 
-if [[ "${version_string:38:1}" != ">" ]]; then
-    echo "版本带英文"
-    version=${version_string:27:11}
-fi
+#if [[ "${version_string:38:1}" != ">" ]]; then
+#    echo "版本带英文"
+#    version=${version_string:27:11}
+#fi
+
+echo 获取 \" 号左边的所有字符
+version_string=${version_string#*\"}
+echo 结果为：${version_string}
+
+echo 获取 \" 号右边的所有字符
+version_string=${version_string%\"*}
+echo 结果为：${version_string}
 
 #=================
 
