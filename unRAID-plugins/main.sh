@@ -41,9 +41,10 @@ cd /github/workspace/${APPNAME}/plugins
 
 
 sed -i "9,9c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/&repo;/-/raw/master\">" preclear.disk.plg
+sed -i "8,8c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/&repo;/-/raw/master\">" statistics.sender.plg
 
+cd /github/workspace/${APPNAME}/
 sed -i "s/raw.githubusercontent.com\/gfjardim/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/gfjardim" -rl ./)
-
 sed -i "s/\/master\//\/-\/raw\/master\//g" $(grep "\/master\/" -rl ./)
 
 echo 替换结束
