@@ -57,6 +57,28 @@ echo 替换结束
 
 cp /tmp/GitHub/${APPNAME}/source/preclear.disk/usr/local/emhttp/plugins/preclear.disk/* /github/workspace/${APPNAME}/source/preclear.disk -R -v -p -f
 
-
 #=================
 
+#=====开始打包====
+echo “开始打包”
+cd /tmp/GitHub/${APPNAME}/source/preclear.disk/
+
+chmod 0755 -R .
+
+echo "7zip压缩"
+7z a -ttar -r preclear.disk-${version}.tar usr/
+7z a -txz -r preclear.disk-${version}.txz preclear.disk-${version}.tar
+
+cp /tmp/GitHub/${APPNAME}/source/preclear.disk/preclear.disk-${version}.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
+
+cd /github/workspace/${APPNAME}/archive/
+
+rm -f preclear.disk-${version}.md5
+
+find preclear.disk-${version}.txz -type f -exec md5sum {} + >/github/workspace/${APPNAME}/archive/preclear.disk-${version}.md5
+
+find . -type f -exec md5sum {} + >/tmp/ca.md5
+
+
+echo 打包结束
+#=================
