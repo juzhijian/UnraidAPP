@@ -106,12 +106,6 @@ echo "7zip压缩"
 7z a -ttar -r ${APPNAME}-${version}-x86_64-1.tar usr/
 7z a -txz -r ${APPNAME}-${version}-x86_64-1.txz ${APPNAME}-${version}-x86_64-1.tar
 
-echo "7zip压缩完成"
-echo “测试”
-ls
-echo “测试2”
-pwd
-
 cp /tmp/GitHub/${APPNAME}/source/${APPNAME}/${APPNAME}-${version}-x86_64-1.txz /github/workspace/${APPNAME}/archive/ -R -v -p -f
 
 md5_data=$(md5sum /github/workspace/${APPNAME}/archive/${APPNAME}-${version}-x86_64-1.txz | cut -d ' ' -f1)
