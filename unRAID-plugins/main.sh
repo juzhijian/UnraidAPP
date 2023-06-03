@@ -33,7 +33,7 @@ git config --global user.email "princergx@live.com"
 
 
 #=====更新plg====
-cd /github/workspace/${APPNAME}/
+cd /github/workspace/${APPNAME}/plugins
 
 #sed -i "8,8c <!ENTITY branch     \"-/raw/master\">" vmbackup.plg
 
