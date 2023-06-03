@@ -27,10 +27,15 @@ git config --global user.name "juzhijian"
 git config --global user.email "princergx@live.com"
 #=================
 
+echo 开始替换V${version}
 
+mkdir -p "/tmp/GitHub/${APPNAME}/source/preclear.disk/usr/local/emhttp/plugins/preclear.disk/"
 
+cd archive
+tar xJvf preclear.disk-${version}.txz
 
-
+cp /github/workspace/${APPNAME}/archive/usr/local/emhttp/plugins/preclear.disk/* /tmp/GitHub/${APPNAME}/source/preclear.disk/usr/local/emhttp/plugins/preclear.disk -R -v -p
+rm -rf usr
 
 #=====更新plg====
 cd /github/workspace/${APPNAME}/plugins
@@ -43,10 +48,15 @@ cd /github/workspace/${APPNAME}/plugins
 sed -i "9,9c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/&repo;/-/raw/master\">" preclear.disk.plg
 sed -i "8,8c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/&repo;/-/raw/master\">" statistics.sender.plg
 
-cd /github/workspace/${APPNAME}/
+cd /tmp/GitHub/${APPNAME}/source/preclear.disk/usr/local/emhttp/plugins/preclear.disk
 sed -i "s/raw.githubusercontent.com\/gfjardim/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/gfjardim" -rl ./)
 sed -i "s/\/master\//\/-\/raw\/master\//g" $(grep "\/master\/" -rl ./)
 
 echo 替换结束
 
+
+cp /tmp/GitHub/${APPNAME}/source/preclear.disk/usr/local/emhttp/plugins/preclear.disk/* /github/workspace/${APPNAME}/source/preclear.disk -R -v -p -f
+
+
 #=================
+
