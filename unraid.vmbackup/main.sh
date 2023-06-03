@@ -17,11 +17,8 @@ version_string=${version_string%\"*}
 echo 结果为：${version_string}
 
 version=${version_string}
-
-#echo ${version_string}
-#echo ${version_string:28:10}
-#version=${version_string:28:10}
 #=================
+
 
 echo 运行替换程序成功
 
@@ -35,7 +32,7 @@ cd /github/workspace/${APPNAME}/
 
 sed -i "10,11c <!ENTITY github \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/&plugin;.plg\">" vmbackup.plg
 
-sed -i "s/raw.githubusercontent.com\//jtok/gitcode.net\//juzhijian/g" $(grep "raw.githubusercontent.com\//jtok" -rl ./)
+sed -i "s/raw.githubusercontent.com\/jtok/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/jtok" -rl ./)
 
 echo 替换结束
 #=================
