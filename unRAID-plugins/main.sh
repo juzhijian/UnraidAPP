@@ -27,15 +27,20 @@ git config --global user.name "juzhijian"
 git config --global user.email "princergx@live.com"
 #=================
 
+
+
+
+
+
 #=====更新plg====
 cd /github/workspace/${APPNAME}/
 
-#sed -i "10,11c <!ENTITY github \"juzhijian/${APPNAME}/-/raw\">\n<!ENTITY pluginURL \"https://gitcode.net/&github;/master/&plugin;.plg\">" vmbackup.plg
+#sed -i "8,8c <!ENTITY branch     \"-/raw/master\">" vmbackup.plg
 
-sed -i "8,8c <!ENTITY branch     \"-/raw/master\">" vmbackup.plg
+#sed -i "11,11c <!ENTITY gitURL     \"https://gitcode.net/juzhijian/unraid.&name;/&branch;\">" vmbackup.plg
 
-sed -i "11,11c <!ENTITY gitURL     \"https://gitcode.net/juzhijian/unraid.&name;/&branch;\">" vmbackup.plg
 
+sed -i "9,9c <!ENTITY gitURL    \"https://gitcode.net/juzhijian/&repo;/-/raw/master\">" preclear.disk.plg
 
 sed -i "s/raw.githubusercontent.com\/gfjardim/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/gfjardim" -rl ./)
 
