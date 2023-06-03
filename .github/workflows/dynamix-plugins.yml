@@ -18,6 +18,7 @@ on:
     paths:
       - 'dynamix-plugins/*'
       - '.github/workflows/dynamix-plugins.yml'
+      - 'mian/*'
     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,7 +32,7 @@ jobs:
       matrix:
         config:  
         - {
-          name: "克隆仓库1",
+          name: "克隆仓库",
           os: ubuntu-latest
           }
         
