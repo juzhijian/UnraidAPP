@@ -36,7 +36,8 @@ sed -i "8,8c <!ENTITY branch     \"-/raw/master\">" vmbackup.plg
 
 sed -i "11,11c <!ENTITY gitURL     \"https://gitcode.net/juzhijian/unraid.&name;/&branch;\">" vmbackup.plg
 
-sed -i "s/raw.githubusercontent.com\/jtok/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/jtok" -rl ./)
+
+sed -i "s/raw.githubusercontent.com\/gfjardim/gitcode.net\/juzhijian/g" $(grep "raw.githubusercontent.com\/jtok" -rl ./)
 
 sed -i "s/\/master\//\/-\/raw\/master\//g" $(grep "\/master\/" -rl ./)
 
