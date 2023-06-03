@@ -13,7 +13,7 @@ version_string=${version_string#*\"}
 echo 结果为：${version_string}
 
 echo 从右边开始删除第一个 \" 号及右边的所有字符
-version_string=${version_string%*\"}
+version_string=${version_string%\"*}
 echo 结果为：${version_string}
 
 #echo ${version_string}
