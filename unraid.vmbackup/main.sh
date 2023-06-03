@@ -16,6 +16,8 @@ echo 获取 \" 号右边的所有字符
 version_string=${version_string%\"*}
 echo 结果为：${version_string}
 
+version=${version_string}
+
 #echo ${version_string}
 #echo ${version_string:28:10}
 #version=${version_string:28:10}
