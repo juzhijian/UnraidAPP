@@ -7,6 +7,11 @@ echo "仓库名称=${APPNAME}"
 
 #====获取版本号====
 version_string=$(nl /github/workspace/${APPNAME}/vmbackup.plg | sed -n '6p')
+version_string=${version_string#*\"}
+version_string=${version_string%*\"}
+
+
+
 echo ${version_string}
 echo ${version_string:28:10}
 version=${version_string:28:10}
