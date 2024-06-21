@@ -164,7 +164,6 @@ grep -rl "https://github.com/${AUTHOR}/${NAME}/raw/master/" ./ | xargs sed -i "s
 
 
 
-
 echo 删除旧.git文件
 rm -rf .git
 
